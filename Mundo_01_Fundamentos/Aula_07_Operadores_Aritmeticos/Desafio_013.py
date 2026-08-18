@@ -23,3 +23,9 @@ Crie um programa que leia o preço de um produto e calcule dois valores distinto
 para pagamento à vista e outro com 8% de aumento para pagamento parcelado.
 '''
 
+preco = float(input("Digite o preço do produto: R$ "))
+pagamento_a_vista = preco * 0.90
+pagamento_parcelado = preco * 1.08
+print(f'\nO produto com o preço R$ {preco:.2f} sendo pago a vista passa a valer R$ {pagamento_a_vista:.2f}')
+print(f'O produto com o preço R$ {preco:.2f} sendo pago parcelado passa a valer R$ {pagamento_parcelado:.2f}')
+
