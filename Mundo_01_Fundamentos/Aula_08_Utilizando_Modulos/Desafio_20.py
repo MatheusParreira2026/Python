@@ -9,3 +9,14 @@ desse módulo que permita embaralhar uma lista de itens, em vez de apenas seleci
 '''
 
 
+from random import shuffle
+
+nome_01 = input('Digite o primeiro nome: ')
+nome_02 = input('Digite o segundo nome: ')
+nome_03 = input('Digite o terceiro nome: ')
+nome_04 = input('Digite o quarto nome: ')
+
+nomes =[nome_01, nome_02, nome_03, nome_04]
+shuffle(nomes)
+
+print(f'A nova ordem é: {nomes}')

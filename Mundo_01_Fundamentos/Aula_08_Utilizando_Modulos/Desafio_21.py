@@ -8,5 +8,6 @@ de reprodução de áudio, pois o Python base não possui essa funcionalidade in
 por padrão. Você precisará encontrar o módulo correto, importá-lo e configurar o caminho
 do arquivo de áudio para que o programa consiga executá-lo.
 '''
+from playsound3 import playsound
 
-
+playsound("04. Moth Into Flame.mp3")
