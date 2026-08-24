@@ -6,5 +6,8 @@ Por exemplo, se o usuário digitar o valor 6.127, o programa deve exibir apenas 
 DICA:O aluno deve examinar as funções disponíveis dentro da classe do módulo math,
 que foi o módulo importado durante a aula para realizar manipulações numéricas.
 '''
+import math
 
-
+numero = float(input("Digite um número: "))
+porcao_inteira = math.trunc(numero)
+print(f'A porção inteira do número {numero} é {porcao_inteira}')
