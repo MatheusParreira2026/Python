@@ -10,10 +10,10 @@ ou seleções randômicas, permitindo que o computador faça a escolha entre os 
 
 from random import choice
 
-nome_01 = input('Digite o primeiro nome: ')
-nome_02 = input('Digite o segundo nome: ')
-nome_03 = input('Digite o terceiro nome: ')
-nome_04 = input('Digite o quarto nome: ')
+nome_01 = str(input('Primeiro aluno: '))
+nome_02 = str(input('Segundo aluno: '))
+nome_03 = str(input('Terceiro aluno: '))
+nome_04 = str(input('Quarto aluno: '))
 
 nomes =[nome_01, nome_02, nome_03, nome_04]
 nome_escolhido = choice(nomes)
