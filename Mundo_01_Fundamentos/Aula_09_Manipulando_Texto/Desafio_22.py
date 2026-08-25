@@ -5,4 +5,8 @@ quantas letras ao todo (sem considerar espaços) e quantas letras
 tem o primeiro nome.
 '''
 
-
+nome = str(input('Digite o seu nome completo: '))
+print(f'Letras maiúsculas: {nome.upper()}')
+print(f'Letras minúsculas: {nome.lower()}')
+print(f"Total de letras: {len(nome.strip().replace(' ', ''))}")
+print(f'Total de letras do primeiro nome: {len(nome.split()[0])}')
