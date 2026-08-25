@@ -5,20 +5,14 @@ DICA: O aluno deve carregar o módulo matemático apropriado para realizar os
 cálculos trigonométricos de forma simples.
 '''
 
-import math
+from math import radians, sin, cos, tan
 
-seno = float(input('Digite o valor do ângulo seno:'))
-cosseno = float(input('Digite o valor do ângulo cosseno: '))
-tangente = float(input('Digite o valor do ângulo tangente: '))
+angulo = float(input('Digite o valor do ângulo:'))
 
-conversor_seno = math.radians(seno)
-conversor_cosseno = math.radians(cosseno)
-conversos_tangente = math.radians(tangente)
+conversor_seno = sin(radians(angulo))
+conversor_cosseno = cos(radians(angulo))
+conversos_tangente = tan(radians(angulo))
 
-seno_resultado_final = math.sin(conversor_seno)
-cosseno_resultado_final= math.cos(conversor_cosseno)
-tangente_resultado_final = math.tan(conversos_tangente)
-
-print(f'Valor do seno: {seno_resultado_final:.4f}')
-print(f'Valor do cosseno: {cosseno_resultado_final:.4f}')
-print(f'Valor da tangente: {tangente_resultado_final:.4f}')
+print(f'Valor do seno: {conversor_seno:.2f}')
+print(f'Valor do cosseno: {conversor_cosseno:.2f}')
+print(f'Valor da tangente: {conversos_tangente:.2f}')
