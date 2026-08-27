@@ -12,4 +12,11 @@ antes de implementar o código, que será testado usando
 as estruturas condicionais if e else aprendidas nesta aula.
 '''
 
+reta_A = float(input('Digite o comprimento da 1ª reta: '))
+reta_B = float(input('Digite o comprimento da 2ª reta: '))
+reta_C = float(input('Digite o comprimento da 3ª reta: '))
 
+if (reta_A < (reta_B + reta_C)) and (reta_B < (reta_A + reta_C)) and (reta_C < (reta_A + reta_B)):
+    print('Triângulo pode ser formado.')
+else:
+    print('Triângulo não pode ser formado.')
