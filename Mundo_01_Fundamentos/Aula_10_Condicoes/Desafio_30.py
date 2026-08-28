@@ -6,8 +6,18 @@ Este é um exercício clássico de programação que utiliza a estrutura condici
 para verificar o resto da divisão do número por 2.
 '''
 
-numero = int(input('Digite um número inteiro: '))
-if numero % 2 == 0:
-    print(f'O número {numero} é par')
+# numero = int(input('Digite um número inteiro: '))
+# if numero % 2 == 0:
+#     print(f'O número {numero} é par')
+# else:
+#     print(f'O número {numero} é ímpar.')
+
+'''
+Alternativa feita pelo professor
+'''
+número = int(input('Me diga um número: '))
+resultado = número % 2
+if resultado == 0:
+    print(f'O número {número} é PAR')
 else:
-    print(f'O número {numero} é ímpar.')
+    print(f'O número {número} é ÍMPAR')
