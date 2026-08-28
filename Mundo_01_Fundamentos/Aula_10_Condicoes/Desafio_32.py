@@ -19,8 +19,10 @@ em Python para exibir a resposta correta.
 # elif ano % 4 == 0:
 #     print(f'O ano {ano} é um ano bissexto.')
 
-ano = int(input('Digite um ano qualquer: '))
-
+from datetime import date
+ano = int(input('Digite um ano qualquer ou 0 para o ano atual: '))
+if ano == 0:
+    ano = date.today().year
 if ano % 400 == 0:
     print(f'O ano {ano} é um ano bissexto.')
 elif ano % 100 == 0:
