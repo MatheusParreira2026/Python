@@ -43,8 +43,7 @@ valor_casa = float(input('Qual o valor da sua casa? R$ '))
 salario = float(input('Qual o valor do seu salário? R$ '))
 anos  = int(input('Em quantos anos você pretende pagar? '))
 
-meses = anos * 12
-prestacao_mensal = valor_casa / meses
+prestacao_mensal = valor_casa / (anos * 12)
 
 trinta_por_cento_do_salario = salario * 30 / 100
 
@@ -52,6 +51,6 @@ print(f'\nA sua prestação mensal corresponde a R$ {prestacao_mensal:.2f}')
 print(f'\n30% do seu salário corresponde a R$ {trinta_por_cento_do_salario:.2f}')
 
 if prestacao_mensal > trinta_por_cento_do_salario:
-    print(f"{cores['vermelho']}\nEmpréstimo NEGADO")
+    print(f"{cores['vermelho'] + cores['negrito']}\nEmpréstimo NEGADO")
 else:
-    print(f"\n{cores['verde']}Empréstimo APROVADO")
+    print(f"{cores['verde'] + cores['negrito']}\nEmpréstimo APROVADO")
