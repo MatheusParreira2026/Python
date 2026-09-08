@@ -44,7 +44,6 @@ salario = float(input('Qual o valor do seu salário? R$ '))
 anos  = int(input('Em quantos anos você pretende pagar? '))
 
 prestacao_mensal = valor_casa / (anos * 12)
-
 trinta_por_cento_do_salario = salario * 30 / 100
 
 print(f'\nA sua prestação mensal corresponde a R$ {prestacao_mensal:.2f}')
