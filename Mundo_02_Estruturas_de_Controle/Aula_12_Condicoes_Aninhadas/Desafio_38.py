@@ -38,4 +38,12 @@ cores = {
     'pretoebranco': '\033[7;97m',
 }
 
+n1 = int(input('Digite o primeiro número inteiro: '))
+n2 = int(input('Digite o segundo número inteiro: '))
 
+if n1 > n2:
+    print(f"O número{cores['verde']} {n1} {cores['limpa']}é maior que {cores['verde']}{n2}{cores['limpa']}.")
+elif n2 > n1:
+    print(f"O número{cores['verde']} {n2} {cores['limpa']}é maior que {cores['verde']}{n1}{cores['limpa']}.")
+else:
+    print(f"Os números {cores['verde']}{n1}{cores['limpa']} e {cores['verde']}{n2}{cores['limpa']} são iguais.")
