@@ -38,4 +38,14 @@ cores = {
     'pretoebranco': '\033[7;97m',
 }
 
+n1 = float(input('Digite quanto você tirou na primeira prova: '))
+n2 = float(input('Digite quanto você tirou na segunda prova: '))
 
+media = (n1 + n2) / 2
+
+if media < 5.0:
+    print(f'Você tem a média de{cores['vermelho']} {media:.2f}{cores['limpa']} pontos, sendo assim está {cores['vermelho']}REPROVADO{cores['limpa']}.')
+elif media < 7.0:
+    print(f'Você tem a média de {cores['amarelo']}{media:.2f}{cores['limpa']} pontos, sendo assim está em {cores['amarelo']}RECUPERAÇÃO{cores['limpa']}.')
+else:
+    print(f'Você tem a média de {cores['verde']}{media:.2f}{cores['limpa']} pontos, sendo assim está{cores['verde']} APROVADO{cores['limpa']}.')
