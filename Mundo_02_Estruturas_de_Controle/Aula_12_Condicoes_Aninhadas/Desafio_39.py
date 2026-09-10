@@ -44,4 +44,11 @@ ano_de_nascimento = int(input('Digite o ano em que você nasceu: '))
 
 idade = date.today().year - ano_de_nascimento
 
-print(f'Você tem {idade} anos.')
+if idade == 18:
+    print(f'Você tem {cores['verde']}{idade}{cores['verde']} anos{cores['limpa']} de idade, portanto deve se alistar.')
+elif idade > 18:
+    prazo = idade - 18
+    print(f'Você tem {cores['verde']}{idade} anos{cores['limpa']} de idade, sendo assim se passaram {prazo} anos para efetuar o alistamento.')
+else:
+    prazo = 18 - idade
+    print(f'Você tem {cores['verde']}{idade} ano(s){cores['limpa']} de idade, você deve esperar {prazo} anos para se alistar.')
