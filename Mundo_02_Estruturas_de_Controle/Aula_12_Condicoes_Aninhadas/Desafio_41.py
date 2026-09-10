@@ -3,6 +3,8 @@ Desafio 41 (22:00): Leia o ano de nascimento de um atleta e mostre sua categoria
 Infantil (até 14 anos), Júnior (até 19 anos), Sênior (até 20 anos) e Master (acima disso).
 '''
 
+from datetime import date
+
 cores = {
     # Reset
     'limpa': '\033[m',
@@ -38,4 +40,17 @@ cores = {
     'pretoebranco': '\033[7;97m',
 }
 
+ano_de_nascimento = int(input('Digite o ano em que você nasceu: '))
 
+idade = date.today().year - ano_de_nascimento
+
+if idade <= 9:
+    print(f"Sua idade de {cores['verde']}{idade} anos{cores['limpa']} corresponde a categoria {cores['verde']}Mirim{cores['limpa']}.")
+elif idade <= 14:
+    print(f"Sua idade de {cores['verde']}{idade} anos{cores['limpa']} corresponde a categoria {cores['verde']}Infantil{cores['limpa']}.")
+elif idade <= 19:
+    print(f"Sua idade de {cores['verde']}{idade} anos{cores['limpa']} corresponde a categoria {cores['verde']}Júnior{cores['limpa']}.")
+elif idade <= 20:
+    print(f"Sua idade de {cores['verde']}{idade} anos{cores['limpa']} corresponde a categoria {cores['verde']}Sênior{cores['limpa']}.")
+else:
+    print(f"Sua idade de {cores['verde']}{idade} anos{cores['limpa']} corresponde a categoria {cores['verde']}Master{cores['limpa']}.")
