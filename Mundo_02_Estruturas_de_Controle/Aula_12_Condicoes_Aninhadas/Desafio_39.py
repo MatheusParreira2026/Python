@@ -3,6 +3,7 @@ Desafio 39 (20:11): Leia o ano de nascimento de um jovem e informe se ele ainda 
 se é a hora exata ou se já passou do prazo. O programa deve mostrar quanto tempo falta ou quanto tempo passou
 do prazo.
 '''
+from datetime import date
 
 cores = {
     # Reset
@@ -39,4 +40,8 @@ cores = {
     'pretoebranco': '\033[7;97m',
 }
 
+ano_de_nascimento = int(input('Digite o ano em que você nasceu: '))
 
+idade = date.today().year - ano_de_nascimento
+
+print(f'Você tem {idade} anos.')
