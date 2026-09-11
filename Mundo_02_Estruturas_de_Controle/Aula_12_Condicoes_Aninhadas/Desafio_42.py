@@ -38,4 +38,21 @@ cores = {
     'pretoebranco': '\033[7;97m',
 }
 
+print('-=' * 12)
+print('Analisador de Triângulos')
+print('-=' * 12)
 
+r1 = float(input(f'{cores['azul']}Primeiro segmento: '))
+r2 = float(input(f'{cores['azul']}Segundo segmento: '))
+r3 = float(input(f'{cores['azul']}Terceiro segmento: '))
+
+if r1 < r2 + r3 and r2 < r1 + r3 and r3 < r1 + r2:
+    print(f'{cores['verde']}Os segmentos acima podem formam um triângulo!')
+    if r1 == r2 == r3:
+        print(f"Os segmentos formam um triângulo equilátero.")
+    elif (r1 == r2) or (r1 == r3) or (r2 == r3):
+        print(f"Os segmentos formam um triângulo Isósceles.")
+    else:
+        print(f"Os segmentos forma um triângulo Escaleno.")
+else:
+    print(f'{cores['vermelho']}Os segmentos acima não podem formar um triângulo.{cores['limpa']}')
