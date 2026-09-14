@@ -8,7 +8,6 @@ Entre 18.5 e 25: Peso ideal
 30 até 40: Obesidade
 Acima de 40: Obesidade mórbida
 '''
-
 cores = {
     # Reset
     'limpa': '\033[m',
@@ -44,4 +43,18 @@ cores = {
     'pretoebranco': '\033[7;97m',
 }
 
+peso = float(input("Quanto você pesa? "))
+altura = float(input("Qual a sua altura? "))
 
+imc = peso / altura ** 2
+
+if imc < 18.5:
+    print(f"\nSeu imc é de {cores['verde']}{imc:.2f}{cores['limpa']}. Você está abaixo do peso.")
+elif imc <= 25:
+    print(f"\nSeu IMC é de {cores['verde']}{imc:.2f}{cores['limpa']}. Você está no peso ideal.")
+elif imc <= 30:
+    print(f"\nSeu IMC é de {cores['verde']}{imc:.2f}{cores['limpa']}. Voce está com sobrepeso.")
+elif imc <= 40:
+    print(f"\nSeu IMC é de {cores['verde']}{imc:.2f}{cores['limpa']}. Você está obeso.")
+else:
+    print(f"\nSeu IMC é de {cores['verde']}{imc:.2f}{cores['limpa']}. Você está com obesidade mórbida.")
