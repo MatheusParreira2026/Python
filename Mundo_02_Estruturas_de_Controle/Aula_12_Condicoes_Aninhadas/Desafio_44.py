@@ -39,4 +39,28 @@ cores = {
     'pretoebranco': '\033[7;97m',
 }
 
+valor_a_ser_pago = float(input("Digite o valor do produto: "))
+print('''Digite (1) para pagamento à vista em dinheiro/cheque
+Digite (2) para pagar à vista no cartão
+Digite (3) para pagamento no cartão em até 2x
+Digite (4) para pagamento no cartão em 3x ou mais''')
+opcoes_de_pagamento = int(input("Opção de pagamento: "))
 
+if opcoes_de_pagamento == 1:
+    desconto_10_por_cento = valor_a_ser_pago - (valor_a_ser_pago * 10 / 100)
+    print(f'''Você escolheu a opção (1) para pagar em dinheiro ou cheque.
+Você tem direito a 10% de desconto.
+O seu produto que custava R$ {valor_a_ser_pago:.2f} passa a custar R$ {desconto_10_por_cento:.2f}''')
+elif opcoes_de_pagamento == 2:
+    desconto_5_por_cento = valor_a_ser_pago - (valor_a_ser_pago * 5 / 100)
+    print(f'''Você escolheu a opção (2) para pagar à vista no cartão.
+Você tem direito a a 5% de desconto.
+O seu produto que custava R$ {valor_a_ser_pago:.2f} passa a custar R$ {desconto_5_por_cento:.2f}''')
+elif opcoes_de_pagamento == 3:
+    print(f'''Você escolheu a opção (3) para pagamento no cartão em até 2x.
+O seu produto custa R$ {valor_a_ser_pago:.2f}''')
+elif opcoes_de_pagamento == 4:
+    taxa_de_20_por_cento_de_juros = valor_a_ser_pago + (valor_a_ser_pago * 20 / 100)
+    print(f'''Você escolheu a opção (4) para pagamento no cartão em 3x ou mais.
+O seu produto passa a ter uma taxa de 20% de juros.    
+O seu produto que custava R$ {valor_a_ser_pago:.2f} passa a custar R$ {taxa_de_20_por_cento_de_juros:.2f}''')
