@@ -2,6 +2,10 @@
 Desafio 45 (25:13): Crie um programa que faça o computador jogar Jokenpô (pedra, papel e tesoura) com você.
 '''
 
+from random import choice
+
+from Python.Mundo_01_Fundamentos.Aula_10_Condicoes.Desafio_28 import jogador
+
 cores = {
     # Reset
     'limpa': '\033[m',
@@ -37,4 +41,16 @@ cores = {
     'pretoebranco': '\033[7;97m',
 }
 
+print("Escreva PEDRA, PAPEL ou TESOURA.")
 
+jogador = str(input("Escolha uma das opção acima: ")).strip().lower()
+
+escolhas = ['PEDRA', 'PAPEL', 'TESOURA']
+computador = choice(escolhas)
+
+if jogador == 'PEDRA' and computador == 'TESOURA' or jogador == 'PAPEL' and computador == 'PEDRA' or jogador == 'TESOURA' and computador == 'PAPEL':
+    print(f"{cores['verde']}Você escolheu {jogador} e o computador escolheu {computador}! Sendo assim você VENCEU!{cores['limpa']}")
+elif jogador == 'PEDRA' and computador == 'PAPEL' or jogador == 'PAPEL' and computador == 'TESOURA' or jogador == 'TESOURA' and computador == 'PEDRA':
+    print(f"{cores['vermelho']}Você escolheu {jogador} e o computador escolheu {computador}! Sendo assim você PERDEU!{cores['limpa']}")
+else:
+    print(f"{cores['amarelo']}Você escolheu {jogador} e o computador escolheu {computador}! Sendo assim EMPATOU!{cores['limpa']}")
