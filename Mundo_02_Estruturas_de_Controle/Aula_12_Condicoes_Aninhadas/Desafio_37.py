@@ -55,58 +55,77 @@ base de conversão: 1 para binário, 2 para octal ou 3 para hexadecimal.
 '''
 Alternativa 01
 '''
+#
+# cores = {
+#     # Reset
+#     'limpa': '\033[m',
+#
+#     # Cores normais
+#     'preto': '\033[30m',
+#     'vermelho': '\033[31m',
+#     'verde': '\033[32m',
+#     'amarelo': '\033[33m',
+#     'azul': '\033[34m',
+#     'magenta': '\033[35m',
+#     'ciano': '\033[36m',
+#     'branco': '\033[37m',
+#
+#     # Cores claras / brilhantes
+#     'cinza': '\033[90m',
+#     'vermelhoclaro': '\033[91m',
+#     'verdeclaro': '\033[92m',
+#     'amareloclaro': '\033[93m',
+#     'azulclaro': '\033[94m',
+#     'magentaclaro': '\033[95m',
+#     'cianoclaro': '\033[96m',
+#     'brancoclaro': '\033[97m',
+#
+#     # Estilos
+#     'negrito': '\033[1m',
+#     'fraco': '\033[2m',
+#     'sublinhado': '\033[4m',
+#     'piscando': '\033[5m',
+#     'invertido': '\033[7m',
+#
+#     # Combinações
+#     'pretoebranco': '\033[7;97m',
+# }
+#
+# numero = int(input('Digite um número inteiro: '))
+# print(f'''\n{cores['verde'] + cores['negrito']}[1] Binário
+# {cores['verde'] + cores['negrito']}[2] Octal
+# {cores['verde'] + cores['negrito']}[3] Hexadecimal{cores['limpa']}''')
+# opcao = int(input('\nEscolha uma das opções acima: '))
+#
+# if opcao == 1:
+#     resultado = bin(numero)[2:]
+#     base = 'binária'
+# elif opcao == 2:
+#     resultado = oct(numero)[2:]
+#     base = 'octal'
+# elif opcao == 3:
+#     resultado = hex(numero)[2:]
+#     base = 'hexadecimal'
+# elif opcao != 1 and 2 and 3:
+#     print('Digite uma opção válida.')
+#
+# print(f'\nO número {cores['verde']}{numero}{cores['limpa']} em sua forma {cores['verde']}{base}{cores['limpa']} é igual a: {cores['verde']}{resultado}{cores['limpa']}')
 
-cores = {
-    # Reset
-    'limpa': '\033[m',
-
-    # Cores normais
-    'preto': '\033[30m',
-    'vermelho': '\033[31m',
-    'verde': '\033[32m',
-    'amarelo': '\033[33m',
-    'azul': '\033[34m',
-    'magenta': '\033[35m',
-    'ciano': '\033[36m',
-    'branco': '\033[37m',
-
-    # Cores claras / brilhantes
-    'cinza': '\033[90m',
-    'vermelhoclaro': '\033[91m',
-    'verdeclaro': '\033[92m',
-    'amareloclaro': '\033[93m',
-    'azulclaro': '\033[94m',
-    'magentaclaro': '\033[95m',
-    'cianoclaro': '\033[96m',
-    'brancoclaro': '\033[97m',
-
-    # Estilos
-    'negrito': '\033[1m',
-    'fraco': '\033[2m',
-    'sublinhado': '\033[4m',
-    'piscando': '\033[5m',
-    'invertido': '\033[7m',
-
-    # Combinações
-    'pretoebranco': '\033[7;97m',
-}
-
-numero = int(input('Digite um número inteiro: '))
-print(f'''\n{cores['verde'] + cores['negrito']}[1] Binário
-{cores['verde'] + cores['negrito']}[2] Octal
-{cores['verde'] + cores['negrito']}[3] Hexadecimal{cores['limpa']}''')
-opcao = int(input('\nEscolha uma das opções acima: '))
+'''
+Alternativa feita pelo professor
+'''
+num = int(input('Digite um número inteiro: '))
+print('''Escolha uma das bases para conversão:
+[ 1 ] converter para BINÁRIO
+[ 2 ] converter para OCTAL
+[ 3 ] converter para HEXADECIMAL''')
+opcao = int(input('Sua opção: '))
 
 if opcao == 1:
-    resultado = bin(numero)
-    base = 'binária'
+    print(f'{num} convertido para BINÁRIO é igual a {bin(num)[2:]}')
 elif opcao == 2:
-    resultado = oct(numero)
-    base = 'octal'
+    print(f'{num} convertido para OCTAL é igual a {oct(num)[2:]}')
 elif opcao == 3:
-    resultado = hex(numero)
-    base = 'hexadecimal'
-elif opcao != 1 and 2 and 3:
-    print('Digite uma opção válida.')
-
-print(f'\nO número {cores['verde']}{numero}{cores['limpa']} em sua forma {cores['verde']}{base}{cores['limpa']} é igual a: {cores['verde']}{resultado}{cores['limpa']}')
+    print(f'{num} convertido para HEXADECIMAL é igual a {hex(num)[2:]}')
+else:
+    print('Opção inválida. Tente novamente.')
