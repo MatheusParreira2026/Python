@@ -38,12 +38,25 @@ cores = {
     'pretoebranco': '\033[7;97m',
 }
 
-n1 = int(input('Digite o primeiro número inteiro: '))
-n2 = int(input('Digite o segundo número inteiro: '))
+# n1 = int(input('Digite o primeiro número inteiro: '))
+# n2 = int(input('Digite o segundo número inteiro: '))
+#
+# if n1 > n2:
+#     print(f"O número{cores['verde']} {n1} {cores['limpa']}é maior que {cores['verde']}{n2}{cores['limpa']}.")
+# elif n2 > n1:
+#     print(f"O número{cores['verde']} {n2} {cores['limpa']}é maior que {cores['verde']}{n1}{cores['limpa']}.")
+# else:
+#     print(f"Os números {cores['verde']}{n1}{cores['limpa']} e {cores['verde']}{n2}{cores['limpa']} são iguais.")
+
+'''
+Alternativa feita pelo professor
+'''
+n1 = int(input('Primeiro número: '))
+n2 = int(input('Segundo número: '))
 
 if n1 > n2:
-    print(f"O número{cores['verde']} {n1} {cores['limpa']}é maior que {cores['verde']}{n2}{cores['limpa']}.")
+    print('O primeiro valor é maior')
 elif n2 > n1:
-    print(f"O número{cores['verde']} {n2} {cores['limpa']}é maior que {cores['verde']}{n1}{cores['limpa']}.")
+    print('O segundo valor é maior')
 else:
-    print(f"Os números {cores['verde']}{n1}{cores['limpa']} e {cores['verde']}{n2}{cores['limpa']} são iguais.")
+    print('Não existe valor maior, os dois são iguais')
