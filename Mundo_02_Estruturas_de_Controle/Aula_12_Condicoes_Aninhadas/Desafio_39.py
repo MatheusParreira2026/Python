@@ -56,7 +56,6 @@ do prazo.
 '''
 Alternativa feita pelo professor
 '''
-
 from datetime import date
 
 ano_atual = date.today().year
