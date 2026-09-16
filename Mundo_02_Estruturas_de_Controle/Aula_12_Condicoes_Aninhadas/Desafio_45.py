@@ -51,4 +51,4 @@ if jogador == 'PEDRA' and computador == 'TESOURA' or jogador == 'PAPEL' and comp
 elif jogador == 'PEDRA' and computador == 'PAPEL' or jogador == 'PAPEL' and computador == 'TESOURA' or jogador == 'TESOURA' and computador == 'PEDRA':
     print(f"{cores['vermelho']}Você escolheu {jogador} e o computador escolheu {computador}! Sendo assim você PERDEU!{cores['limpa']}")
 else:
-    print(f"{cores['amarelo']}Você escolheu {jogador} e o computador escolheu também {computador}! Sendo assim EMPATOU!{cores['limpa']}")
+    print(f"{cores['amarelo']}Você escolheu {jogador} e o computador também escolheu {computador}! Sendo assim EMPATOU!{cores['limpa']}")
