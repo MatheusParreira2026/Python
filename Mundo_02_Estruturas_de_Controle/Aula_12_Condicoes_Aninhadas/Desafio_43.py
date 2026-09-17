@@ -8,53 +8,72 @@ Entre 18.5 e 25: Peso ideal
 30 até 40: Obesidade
 Acima de 40: Obesidade mórbida
 '''
-cores = {
-    # Reset
-    'limpa': '\033[m',
+# cores = {
+#     # Reset
+#     'limpa': '\033[m',
+#
+#     # Cores normais
+#     'preto': '\033[30m',
+#     'vermelho': '\033[31m',
+#     'verde': '\033[32m',
+#     'amarelo': '\033[33m',
+#     'azul': '\033[34m',
+#     'magenta': '\033[35m',
+#     'ciano': '\033[36m',
+#     'branco': '\033[37m',
+#
+#     # Cores claras / brilhantes
+#     'cinza': '\033[90m',
+#     'vermelhoclaro': '\033[91m',
+#     'verdeclaro': '\033[92m',
+#     'amareloclaro': '\033[93m',
+#     'azulclaro': '\033[94m',
+#     'magentaclaro': '\033[95m',
+#     'cianoclaro': '\033[96m',
+#     'brancoclaro': '\033[97m',
+#
+#     # Estilos
+#     'negrito': '\033[1m',
+#     'fraco': '\033[2m',
+#     'sublinhado': '\033[4m',
+#     'piscando': '\033[5m',
+#     'invertido': '\033[7m',
+#
+#     # Combinações
+#     'pretoebranco': '\033[7;97m',
+# }
+#
+# peso = float(input("Quanto você pesa? "))
+# altura = float(input("Qual a sua altura? "))
+#
+# imc = peso / altura ** 2
+#
+# if imc < 18.5:
+#     print(f"\nSeu imc é de {cores['verde']}{imc:.2f}{cores['limpa']}. Você está abaixo do peso.")
+# elif imc <= 25:
+#     print(f"\nSeu IMC é de {cores['verde']}{imc:.2f}{cores['limpa']}. Você está no peso ideal.")
+# elif imc <= 30:
+#     print(f"\nSeu IMC é de {cores['verde']}{imc:.2f}{cores['limpa']}. Voce está com sobrepeso.")
+# elif imc <= 40:
+#     print(f"\nSeu IMC é de {cores['verde']}{imc:.2f}{cores['limpa']}. Você está obeso.")
+# else:
+#     print(f"\nSeu IMC é de {cores['verde']}{imc:.2f}{cores['limpa']}. Você está com obesidade mórbida.")
 
-    # Cores normais
-    'preto': '\033[30m',
-    'vermelho': '\033[31m',
-    'verde': '\033[32m',
-    'amarelo': '\033[33m',
-    'azul': '\033[34m',
-    'magenta': '\033[35m',
-    'ciano': '\033[36m',
-    'branco': '\033[37m',
-
-    # Cores claras / brilhantes
-    'cinza': '\033[90m',
-    'vermelhoclaro': '\033[91m',
-    'verdeclaro': '\033[92m',
-    'amareloclaro': '\033[93m',
-    'azulclaro': '\033[94m',
-    'magentaclaro': '\033[95m',
-    'cianoclaro': '\033[96m',
-    'brancoclaro': '\033[97m',
-
-    # Estilos
-    'negrito': '\033[1m',
-    'fraco': '\033[2m',
-    'sublinhado': '\033[4m',
-    'piscando': '\033[5m',
-    'invertido': '\033[7m',
-
-    # Combinações
-    'pretoebranco': '\033[7;97m',
-}
-
-peso = float(input("Quanto você pesa? "))
-altura = float(input("Qual a sua altura? "))
-
-imc = peso / altura ** 2
-
+'''
+Alternativa feita pelo professor
+'''
+peso = float(input('Qual é seu peso? (Kg) '))
+altura = float(input('Qual é sua altura? (m) '))
+imc = peso / (altura ** 2)
+print('O IMC dessa pessoa é de {:.1f}'.format(imc))
 if imc < 18.5:
-    print(f"\nSeu imc é de {cores['verde']}{imc:.2f}{cores['limpa']}. Você está abaixo do peso.")
-elif imc <= 25:
-    print(f"\nSeu IMC é de {cores['verde']}{imc:.2f}{cores['limpa']}. Você está no peso ideal.")
-elif imc <= 30:
-    print(f"\nSeu IMC é de {cores['verde']}{imc:.2f}{cores['limpa']}. Voce está com sobrepeso.")
-elif imc <= 40:
-    print(f"\nSeu IMC é de {cores['verde']}{imc:.2f}{cores['limpa']}. Você está obeso.")
-else:
-    print(f"\nSeu IMC é de {cores['verde']}{imc:.2f}{cores['limpa']}. Você está com obesidade mórbida.")
+    print('Você está ABAIXO DO PESO normal')
+elif 18.5 <= imc < 25:
+    print('PARABÉNS, você está na faixa de PESO NORMAL')
+elif 25 <= imc < 30:
+    print('Você está em SOBREPESO')
+elif 30 <= imc < 40:
+    print('Você está em OBESIDADE!')
+elif imc >= 40:
+    print('Você está em OBESIDADE MÓRBIDA, cuidado!')
+
