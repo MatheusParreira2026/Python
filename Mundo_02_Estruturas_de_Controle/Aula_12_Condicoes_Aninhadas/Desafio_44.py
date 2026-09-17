@@ -40,27 +40,37 @@ cores = {
 }
 
 valor_a_ser_pago = float(input("Digite o valor do produto: "))
-print('''Digite (1) para pagamento à vista em dinheiro/cheque
+print('''\nDigite (1) para pagamento à vista no dinheiro ou cheque
 Digite (2) para pagar à vista no cartão
 Digite (3) para pagamento no cartão em até 2x
 Digite (4) para pagamento no cartão em 3x ou mais''')
-opcoes_de_pagamento = int(input("Opção de pagamento: "))
+opcoes_de_pagamento = int(input("\nOpção de pagamento: "))
 
 if opcoes_de_pagamento == 1:
     desconto_10_por_cento = valor_a_ser_pago - (valor_a_ser_pago * 10 / 100)
-    print(f'''Você escolheu a opção (1) para pagar em dinheiro ou cheque.
-Você tem direito a 10% de desconto.
-O seu produto que custava R$ {valor_a_ser_pago:.2f} passa a custar R$ {desconto_10_por_cento:.2f}''')
+    print(f'''\nVocê escolheu a {cores['verde']}opção (1){cores['limpa']} para pagar em à vista no dinheiro ou cheque.
+Você tem direito a {cores['verde']}10% de desconto{cores['limpa']}.
+O seu produto que custava {cores['verde']}R$ {valor_a_ser_pago:.2f}{cores['limpa']} passa a custar {cores['verde']}
+R$ {desconto_10_por_cento:.2f}.{cores['limpa']}''')
 elif opcoes_de_pagamento == 2:
     desconto_5_por_cento = valor_a_ser_pago - (valor_a_ser_pago * 5 / 100)
-    print(f'''Você escolheu a opção (2) para pagar à vista no cartão.
-Você tem direito a a 5% de desconto.
-O seu produto que custava R$ {valor_a_ser_pago:.2f} passa a custar R$ {desconto_5_por_cento:.2f}''')
+    print(f'''\nVocê escolheu a {cores['verde']}opção (2){cores['limpa']} para pagar à vista no cartão.
+Você tem direito a a {cores['verde']}5% de desconto{cores['limpa']}. O seu produto que custava {cores['verde']}
+R$ {valor_a_ser_pago:.2f}{cores['limpa']} passa a custar {cores['verde']}R$ {desconto_5_por_cento:.2f}{cores['limpa']}.''')
 elif opcoes_de_pagamento == 3:
-    print(f'''Você escolheu a opção (3) para pagamento no cartão em até 2x.
-O seu produto custa R$ {valor_a_ser_pago:.2f}''')
+    parcelamento_do_valor = valor_a_ser_pago / 2
+    print(f'''\nVocê escolheu a {cores['verde']}opção (3){cores['limpa']}.
+O seu pagamento será dividido em {cores['verde']}2 vezes{cores['limpa']} 
+de {cores['verde']}R$ {parcelamento_do_valor:.2f}{cores['limpa']}.''')
 elif opcoes_de_pagamento == 4:
-    taxa_de_20_por_cento_de_juros = valor_a_ser_pago + (valor_a_ser_pago * 20 / 100)
-    print(f'''Você escolheu a opção (4) para pagamento no cartão em 3x ou mais.
-O seu produto passa a ter uma taxa de 20% de juros.    
-O seu produto que custava R$ {valor_a_ser_pago:.2f} passa a custar R$ {taxa_de_20_por_cento_de_juros:.2f}''')
+    parcelas = int(input("\nEscolha em quantas vezes deseja parcelar o produto: "))
+    if parcelas < 3:
+        print(f"{cores['vermelho']}ERRO. Digite um parcelamento em 3 ou acima de 3 vezes.{cores['vermelho']}")
+    else:
+        taxa_de_20_por_cento_de_juros = valor_a_ser_pago + (valor_a_ser_pago * 20 / 100)
+        valor_parcelado = taxa_de_20_por_cento_de_juros / parcelas
+        print(f'''\nVocê escolheu a {cores['verde']}opção (4){cores['limpa']} para pagamento no cartão em 3x ou mais.
+O seu produto passa a ter uma {cores['verde']}taxa de 20% de juros{cores['limpa']}.
+O seu produto que custava {cores['verde']}R$ {valor_a_ser_pago:.2f}{cores['limpa']} passa a custar {cores['verde']}
+R$ {taxa_de_20_por_cento_de_juros:.2f}{cores['limpa']}.   
+Ele será dividido em {cores['verde']}{parcelas} parcelas{cores['limpa']} de {cores['verde']}R$ {valor_parcelado:.2f}{cores['limpa']}.''')
