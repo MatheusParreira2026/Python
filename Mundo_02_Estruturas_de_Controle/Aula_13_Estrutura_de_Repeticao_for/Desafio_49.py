@@ -40,4 +40,9 @@ cores = {
     'pretoebranco': '\033[7;97m',
 }
 
-
+n = int(input("Digite um número: "))
+print("")
+print("=" * 20, f"TABUADA DE {n}", "=" * 20)
+for contador in range(1, 11):
+    resultado = n * contador
+    print(f"{contador} X {n}: {resultado}")
