@@ -40,4 +40,5 @@ cores = {
     'pretoebranco': '\033[7;97m',
 }
 
+n = int(input("Digite um número inteiro: "))
 
