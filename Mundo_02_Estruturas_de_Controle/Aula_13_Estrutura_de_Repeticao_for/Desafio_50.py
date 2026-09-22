@@ -40,5 +40,22 @@ cores = {
     # Combinações
     'pretoebranco': '\033[7;97m',
 }
+soma = 0
+for n in range(0, 6):
+    entrada = int(input("Digite um número inteiro: "))
+    if entrada % 2 == 0:
+        soma += entrada
+print(f"A soma dos seis números pares inteiros é igual a: {soma}")
 
 
+'''
+Alternativa incorreta (modificar futuramente)
+'''
+# soma = 0
+# entrada = int(input("Digite um número inteiro: "))
+# if entrada % 2 == 0:
+#     for n2 in range(0, 5):
+#         entrada_02 = int(input("Digite outro número inteiro: "))
+#         if entrada % 2 == 0:
+#             soma += entrada
+# print(f"A soma dos números pares inteiros é igual a: {soma}")
