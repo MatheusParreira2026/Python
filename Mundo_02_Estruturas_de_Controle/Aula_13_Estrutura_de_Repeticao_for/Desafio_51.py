@@ -41,4 +41,9 @@ cores = {
     'pretoebranco': '\033[7;97m',
 }
 
+termo = int(input("Digite o primeiro termo: "))
+razao = int(input("Digite a razão: "))
 
+for n in range(1, 11):
+    resultado = termo + (n - 1) * razao
+    print(f"termo {n} = {cores['verde']}{termo}{cores['limpa']} + ({n} - 1) * {cores['verde']}{razao}{cores['limpa']} = {resultado}")
