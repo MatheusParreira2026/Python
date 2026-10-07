@@ -40,5 +40,17 @@ cores = {
     'pretoebranco': '\033[7;97m',
 }
 
-n = int(input("Digite um número inteiro: "))
+numero = int(input("Digite um número inteiro: "))
 
+total_divisores = 0
+
+if numero > 1:
+    for divisor in range(1, numero + 1):
+        if numero % divisor == 0:
+            total_divisores += 1
+    if total_divisores == 2:
+        print("É primo.")
+    else:
+        print("Não é primo.")
+else:
+    print("Digite um número maior que 1.")
