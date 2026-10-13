@@ -40,4 +40,12 @@ cores = {
     'pretoebranco': '\033[7;97m',
 }
 
+palavra = str(input("Escreva uma palavra ou uma frase: ")).replace(" ", "").lower()
 
+invertida = ""
+for analisador in range(len(palavra) - 1, - 1, - 1):
+    invertida += palavra[analisador]
+if palavra == invertida:
+    print(f"A string {palavra} é um palíndromo.")
+else:
+    print(f"A string {palavra} não é palíndromo.")
