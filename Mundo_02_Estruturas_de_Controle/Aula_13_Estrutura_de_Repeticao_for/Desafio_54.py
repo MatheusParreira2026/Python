@@ -5,7 +5,7 @@ Crie um programa que leia o ano de nascimento de
 sete pessoas. No final, mostre quantas pessoas ainda não
 atingiram a maioridade e quantas já são maiores.
 '''
-
+from datetime import date
 cores = {
     # Reset
     'limpa': '\033[m',
@@ -40,5 +40,14 @@ cores = {
     # Combinações
     'pretoebranco': '\033[7;97m',
 }
-
-
+menores = 0
+maiores = 0
+for pessoa in range(1, 8):
+    ano_de_nascimento = int(input(f"{pessoa}ª pessoa, digite o ano do seu nascimento: "))
+    idade = date.today().year - ano_de_nascimento
+    if idade < 18:
+        menores += 1
+    else:
+        maiores += 1
+print(f"Há {menores} pessoas menores de idade.")
+print(f"Há {maiores} pessoas maiores de idade.")
