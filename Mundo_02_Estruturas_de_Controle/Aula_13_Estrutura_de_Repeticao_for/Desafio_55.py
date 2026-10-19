@@ -40,4 +40,16 @@ cores = {
     'pretoebranco': '\033[7;97m',
 }
 
-
+maior_peso = 0
+menor_peso = 0
+for pessoa in range(1, 6):
+    peso = float(input(f"{pessoa}ª pessoa, digite o seu peso em KG: "))
+    if pessoa == 1:
+        maior_peso = peso
+        menor_peso = peso
+    elif peso > maior_peso:
+        maior_peso = peso
+    if peso < menor_peso:
+        menor_peso = peso
+print(f"O maior peso digitado é {maior_peso}KG.")
+print(f"O menor peso digitado é {menor_peso}KG.")
