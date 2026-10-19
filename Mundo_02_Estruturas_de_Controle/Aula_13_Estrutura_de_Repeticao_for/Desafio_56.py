@@ -2,7 +2,7 @@
 DESAFIO 056
 
 Desenvolva um programa que leia o nome, idade e sexo de quatro pessoas.
- Ao final, o programa deve exibir três informações:
+Ao final, o programa deve exibir três informações:
 
 A média de idade do grupo;
 O nome do homem mais velho;
@@ -43,5 +43,11 @@ cores = {
     # Combinações
     'pretoebranco': '\033[7;97m',
 }
-
-
+acumulador_de_idades = 0
+for pessoa in range(1, 5):
+    nome = str(input(f"{pessoa}ª pessoa, digite o seu nome: "))
+    idade = int(input(f"{pessoa}ª pessoa, digite sua idade: "))
+    sexo = str(input(f"{pessoa}ª pessoa, Informe o seu sexo: "))
+    acumulador_de_idades+= idade
+media = acumulador_de_idades / 4
+print(f"A media das idades é de {media} anos.")
