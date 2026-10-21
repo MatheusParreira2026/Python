@@ -47,7 +47,8 @@ acumulador_de_idades = 0
 for pessoa in range(1, 5):
     nome = str(input(f"{pessoa}ª pessoa, digite o seu nome: "))
     idade = int(input(f"{pessoa}ª pessoa, digite sua idade: "))
-    sexo = str(input(f"{pessoa}ª pessoa, Informe o seu sexo: "))
-    acumulador_de_idades+= idade
+    sexo = str(input(f"""{pessoa}ª pessoa, Informe o seu sexo,
+digite 'M' pra masculino e 'F' para feminino: """)).replace(" ", "").lower()
+    acumulador_de_idades += idade
 media = acumulador_de_idades / 4
 print(f"A media das idades é de {media} anos.")
