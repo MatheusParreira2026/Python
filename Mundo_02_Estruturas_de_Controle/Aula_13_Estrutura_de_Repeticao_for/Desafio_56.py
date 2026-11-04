@@ -43,12 +43,23 @@ cores = {
     # Combinações
     'pretoebranco': '\033[7;97m',
 }
+
 acumulador_de_idades = 0
+maior_idade = 0
+nome_mais_velho = ""
+mulheres_menores = 0
 for pessoa in range(1, 5):
     nome = str(input(f"{pessoa}ª pessoa, digite o seu nome: "))
     idade = int(input(f"{pessoa}ª pessoa, digite sua idade: "))
     sexo = str(input(f"""{pessoa}ª pessoa, Informe o seu sexo,
 digite 'M' pra masculino e 'F' para feminino: """)).replace(" ", "").lower()
     acumulador_de_idades += idade
+    if sexo == "m" and idade > maior_idade:
+        maior_idade = idade
+        nome_mais_velho = nome
+    if sexo == "f" and idade < 21:
+        mulheres_menores += 1
 media = acumulador_de_idades / 4
 print(f"A média das idades é de {media} anos.")
+print(f"O nome do homem mais velho é {nome_mais_velho}.")
+print(f"Há {mulheres_menores} mulheres com menos de 21 anos.")
